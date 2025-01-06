@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Je trompe mon cookie dans tes larmes</title>
+    <title>Jeu de Plateforme Phaser.js</title>
+    <style>
+        /* Le style de base pour centrer le jeu dans le navigateur */
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #87CEEB; /* Un fond bleu ciel pour l'arrière-plan */
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
 </head>
+
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
+    <!-- L'élément canvas pour afficher le jeu -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"></script>
+    <!-- Charger votre script JavaScript principal -->
     <script src="main.js"></script>
 </body>
+
 </html>
