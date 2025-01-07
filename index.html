@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeu de Plateforme Phaser.js</title>
+    <title>Supa Mawio</title>
     <style>
-        /* Le style de base pour centrer le jeu dans le navigateur */
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #87CEEB; /* Un fond bleu ciel pour l'arrière-plan */
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background: lightblue;
         }
 
-        canvas {
-            border: 1px solid black;
+        h1{
+            text-align: center;
         }
     </style>
 </head>
-
 <body>
-    <!-- L'élément canvas pour afficher le jeu -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"></script>
-    <!-- Charger votre script JavaScript principal -->
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <!-- Musique en boucle -->
+        <audio id="backgroundMusic" src="assets/BGM/Overworld Theme - Super Mario Land.mp3" loop autoplay></audio>
+        <audio id="jumpSound" src="assets/BGM/Mario Jump Sound Effect.mp3"></audio>
+    <h1>Utilisez les flèches du clavier pour vous déplacer ou pour sauter</h1>
     <script src="main.js"></script>
 </body>
-
 </html>
+
