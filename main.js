@@ -68,14 +68,22 @@ function generateInitialGround() {
 // Génération de nouvelles tuiles si nécessaire
 function generateGroundIfNeeded() {
     const rightmostTile = groundTiles[groundTiles.length - 1];
+    const leftmostTile = groundTiles[0];
+
+    // Ajouter des tuiles à droite si nécessaire
     if (rightmostTile && rightmostTile.x - cameraOffset.x < canvas.width) {
         groundTiles.push({
             x: rightmostTile.x + 64,
             y: canvas.height - groundHeight,
         });
     }
-    while (groundTiles[0] && groundTiles[0].x - cameraOffset.x < -64) {
-        groundTiles.shift();
+
+    // Ajouter des tuiles à gauche si nécessaire (si le joueur revient en arrière)
+    if (leftmostTile && leftmostTile.x - cameraOffset.x > -64) {
+        groundTiles.unshift({
+            x: leftmostTile.x - 64,
+            y: canvas.height - groundHeight,
+        });
     }
 }
 
